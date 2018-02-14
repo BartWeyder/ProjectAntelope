@@ -21,8 +21,8 @@ namespace Assets._Root.Scripts.Strange.Context
             base.Launch();
             Debug.Log("I'm still trying");
             //This part works but why command not?
-            //var game = injectionBinder.GetInstance<Game>();
-            //game.Start();
+            var game = injectionBinder.GetInstance<Game>();
+            game.Start();
             var startSignal = injectionBinder.GetInstance<GameLoaded>();
             startSignal.Dispatch();
         }
